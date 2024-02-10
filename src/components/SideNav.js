@@ -33,7 +33,7 @@ const SideNav = () => {
             fetch('https://api.themoviedb.org/3/authentication/token/new', GET)
                 .then(response => response.json())
                 .then(token => {
-                    window.location.replace(`https://www.themoviedb.org/authenticate/${token.request_token}?redirect_to=https://cineverse-bigbro132.vercel.app/`);
+                    window.location.replace(`https://www.themoviedb.org/authenticate/${token.request_token}?redirect_to=https://cineverse-bigbro-132.vercel.app/`);
                     dispatch({type: 'isFetchingToken', payload: false});
                 })
                 .catch(err => console.error(err));
