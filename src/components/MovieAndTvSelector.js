@@ -114,7 +114,7 @@ const MovieAndTvSelector = ({ mediaType, setGenres, setSorttype }) => {
                 isMulti
                 isClearable={true}
                 onChange={handleSelectItem}
-                placeholder='Genres'
+                placeholder='&nbsp;Genres'
                 styles={{
                     control: (base) => ({
                         ...base, 
