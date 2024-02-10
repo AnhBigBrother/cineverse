@@ -119,8 +119,8 @@ const Header = () => {
     return (
         <header className="fixed top-0 w-full h-14 px-1 sm:px-3 flex flex-row justify-between items-center bg-black z-40">
             <span id='mobileSearchBar' className='absolute top-14 left-0 px-2 w-full h-12 hidden lg:hidden bg-transparent flex-row'>
-                <input className='h-full w-full bg-movie-theater px-3 outline-0 border border-stone-600 focus:border-amber-300 rounded-l-lg' placeholder='Search' value={query} onChange={event => setQuery(event.target.value)} onKeyDown={(e) => { e.key === 'Enter' && handleClickSearch() }}></input>
-                <button className='h-full bg-stone-800 px-3 border border-stone-600 hover:border-amber-300 rounded-r-lg' onClick={handleClickSearch}><SearchIcon fill="#fde047d9" /></button>
+                <input className='h-full w-full bg-movie-theater px-3 outline-0 border border-stone-600 focus:border-amber-300 rounded-l-lg placeholder:text-amber-300 placeholder:italic placeholder:opacity-30 text-amber-300 text-opacity-90' placeholder='Search for anything...' value={query} onChange={event => setQuery(event.target.value)} onKeyDown={(e) => { e.key === 'Enter' && handleClickSearch() }}></input>
+                <button className='h-full bg-stone-800 px-3 border border-stone-600 hover:border-amber-300 rounded-r-lg' onClick={handleClickSearch}><SearchIcon height="16" width="16" fill="#fde047d9" /></button>
                 {displayDropdown && <div ref={inp2} className='absolute w-[98%] mx-[1%] z-20 top-14 rounded-lg left-0 h-auto bg-neutral-800 flex flex-col justify-start'>{dropdownList}</div>}
             </span>
             <SideNav />
@@ -129,12 +129,12 @@ const Header = () => {
                 <button onClick={() => { dispatch(updateNavBtn('home')); navigate('/home') }}><LogoName fill='#ffffff' /></button>
             </span>
             <span className='relative h-10 w-2/5 hidden flex-row lg:flex'>
-                <input className='relative h-full w-full rounded-l-full px-5 bg-movie-theater border border-stone-800 outline-0 focus:border-amber-300' placeholder='Search' value={query} onChange={event => setQuery(event.target.value)} onKeyDown={(e) => { e.key === 'Enter' && handleClickSearch() }}></input>
-                <button className='relative h-full w-16 rounded-r-full flex justify-center items-center bg-stone-800 border-amber-300 hover:border' onClick={handleClickSearch}><SearchIcon fill="#fde047d9" /></button>
+                <input className='relative h-full w-full rounded-l-full px-5 bg-movie-theater border border-stone-800 outline-0 focus:border-amber-300 placeholder:text-amber-300 placeholder:italic placeholder:opacity-30 text-amber-300 text-opacity-90' placeholder='Search for anything...' value={query} onChange={event => setQuery(event.target.value)} onKeyDown={(e) => { e.key === 'Enter' && handleClickSearch() }}></input>
+                <button className='relative h-full w-16 rounded-r-full flex justify-center items-center bg-stone-800 border-amber-300 hover:border' onClick={handleClickSearch}><SearchIcon height="16" width="16" fill="#fde047d9" /></button>
                 {displayDropdown && <div ref={inp1} className='absolute w-full z-20 top-12 rounded-lg left-0 h-auto bg-neutral-800 flex flex-col justify-start'>{dropdownList}</div>}
             </span>
             <span className='relative w-auto h-full flex flex-row gap-1 sm:gap-2 items-center'>
-                <button className='relative h-10 w-10 rounded-full lg:hidden hover:bg-stone-800 flex justify-center items-center' onClick={handleClickMobileSearchBtn}><SearchIcon fill="#ffffff" /></button>
+                <button className='relative h-10 w-10 rounded-full lg:hidden hover:bg-stone-800 flex justify-center items-center' onClick={handleClickMobileSearchBtn}><SearchIcon height="18" width="18" fill="#fde047d9" /></button>
                 <SignIn />
             </span>
         </header>
