@@ -77,7 +77,7 @@ const SideNav = () => {
             <div className='relative w-full h-6 flex-shrink-0'></div>
             <div className='relative w-full h-auto px-3 text-stone-600 flex flex-col text-sm flex-shrink-0'>
                 <a className='font-bold cursor-pointer hover:text-stone-300' href='https://github.com/AnhBigBrother' target='_blank'>Author</a>
-                <a className='font-bold cursor-pointer hover:text-stone-300' href='https://github.com/AnhBigBrother' target='_blank'>Source code</a>
+                <a className='font-bold cursor-pointer hover:text-stone-300' href='https://github.com/AnhBigBrother/cineverse' target='_blank'>Source code</a>
                 <a className='font-bold cursor-pointer hover:text-stone-300' href='https://developer.themoviedb.org/reference/intro/getting-started' target='_blank'>API</a>
                 <br />
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent placerat nulla at gravida vulputate. In elementum et mauris cursus sollicitudin. Maecenas eu dictum sem. Aenean blandit purus et diam auctor sollicitudin. Maecenas tempor, arcu non scelerisque pharetra, urna risus porta purus, ut scelerisque velit metus non ante.</p>
