@@ -57,7 +57,7 @@ const Header = () => {
         }
     }
     const handleClickSearch = () => {
-        navigate('//search/' + query);
+        navigate('/search/' + query);
         setDisplayDropdown(false);
         const mobileSearchBar = document.getElementById('mobileSearchBar');
         const fog = document.getElementById('fog');
