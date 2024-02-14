@@ -104,7 +104,7 @@ const Detail = () => {
         addToFavoriteTooltip.current.style.display = 'block';
         setTimeout(() => { addToFavoriteTooltip.current.style.display = 'none' }, 1200);
     }
-    console.log(data)
+
     return (
         <div className="relative w-full h-auto">
             <div ref={detail} className="relative w-full h-auto flex flex-col">
