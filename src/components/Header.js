@@ -139,7 +139,7 @@ const Header = () => {
             <SideNav />
             <span className='relative w-auto h-full flex flex-row gap-0 md:gap-2 items-center'>
                 <button className='relative w-10 h-10 text-2xl rounded-full hover:bg-stone-800 lg:hidden' onClick={handleClickMobileBtn}>&#9776;</button>
-                <button onClick={() => { dispatch(updateNavBtn('home')); navigate('/home') }}><LogoName fill='#ffffff' /></button>
+                <button onClick={() => { dispatch(updateNavBtn('home')); navigate('/home') }}><LogoName className='fill-white'/></button>
             </span>
             <span className='relative h-10 w-2/5 hidden flex-row lg:flex items-center'>
                 <input className='relative h-full w-full rounded-l-full px-5 bg-movie-theater border border-stone-800 outline-0 focus:border-amber-300 placeholder:text-amber-300 placeholder:italic placeholder:opacity-30 text-amber-300 text-opacity-90' placeholder='Search for anything...' value={query} onChange={event => setQuery(event.target.value)} onKeyDown={(e) => { e.key === 'Enter' && handleClickSearch() }}></input>

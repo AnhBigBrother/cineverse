@@ -104,7 +104,7 @@ const Detail = () => {
         addToFavoriteTooltip.current.style.display = 'block';
         setTimeout(() => { addToFavoriteTooltip.current.style.display = 'none' }, 1200);
     }
-
+    console.log(data)
     return (
         <div className="relative w-full h-auto">
             <div ref={detail} className="relative w-full h-auto flex flex-col">
@@ -115,7 +115,7 @@ const Detail = () => {
                     <div className="relative h-auto w-auto flex flex-col gap-5 md:gap-10 justify-start items-center p-10 xl:pl-[10%] md:flex-row md:items-start">
                         {data.poster_path ? <img src={`https://image.tmdb.org/t/p/w500${data.poster_path}`} className="rounded-xl relative w-full h-auto md:w-[360px]" /> : <div className="rounded-xl relative w-full h-full md:w-[360px] bg-slate-900 aspect-[2/3] flex flex-col justify-center items-center"><Noposter height='96px' width='96px' /><p className="text-center text-sm md:text-base">No poster avaiable</p></div>}
                         <div className="relative h-full lg:max-w-[50%] flex flex-col justify-center overflow-x-hidden">
-                            <p className="text-2xl lg:text-3xl"><span className="font-bold">{data.title || data.name}</span><span> ({data.release_date ? data.release_date.slice(0, 4) : data.last_air_date.slice(0, 4)})</span></p>
+                            <p className="text-2xl lg:text-3xl"><span className="font-bold">{data.title || data.name}</span><span> ({data.release_date ? data.release_date.slice(0, 4) : data.last_air_date?.slice(0, 4)})</span></p>
                             <p className="italic">{data.tagline}</p>
                             {data.genres && <div className="flex flex-row flex-wrap gap-2 py-2">{data.genres.map(gen => <p key={gen.id} className="text-sm text-black bg-stone-300 bg-opacity-50 rounded-md px-2 py-1 flex-shrink-0">{gen.name}</p>)}</div>}
                             <div className="relative w-auto h-auto flex flex-row gap-5 items-center">
