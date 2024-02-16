@@ -18,7 +18,7 @@ const useUpdateUserNSignIn = () => {
             .then(data => data.session_id)
             .catch(err => console.error(err));
         if (session_id) {
-            await fetch(`https://api.themoviedb.org/3/account/20792554?session_id=${session_id}`, GET)
+            await fetch(`https://api.themoviedb.org/3/account/account_id?session_id=${session_id}`, GET)
                 .then(response => {
                     if (response.status === 200){return response.json()}
                     else {
